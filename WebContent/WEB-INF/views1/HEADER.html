@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html  
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head lang="en">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:fragment="header">
+<div  class="col-md-12">
+
+					<div class="col-md-2">
+						<img  th:src="@{/static/images/LogoMuSic.jpg}"  alt="ANH LOGO" height="100px" width="80px">
+					</div>
+					<div class="col-md-10">
+						<h2><a href="#" style="text-decoration: none; color: #ffcc00">Music Records</a><br></h2>
+						<p style="color: #007f00;font-weight: bold;">Quality Sounds Served Up Fresh! </p>
+					</div>
+				</div>
+				<div class="col-md-12" id="TrangThai">
+					<div class="col-md-8">
+						
+					</div>
+					<div class="col-md-4" >
+						<ul class="list-inline" id="tab1">
+							<li>|</li>
+							<li><a th:href="@{/index/Login.htm}">Admin</a></li>
+							<li>|</li>
+							<li><a href="#">Delete Cookies</a></li>
+							<li>|</li>
+							<li><a href="#">Show Cart</a></li>
+						</ul>
+					</div> 
+				</div>
+				</div>
+</body>
+</html>

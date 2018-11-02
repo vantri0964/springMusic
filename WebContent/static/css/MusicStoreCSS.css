@@ -1,0 +1,38 @@
+#TrangThai{
+	border-top: 2px solid yellow;
+	border-bottom: 2px solid yellow;
+	margin:30px;
+}
+#Content{
+height: 300px;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+#content-left{
+	height: 500px;
+	border-right: 2px solid yellow;
+	padding-top: 25px;
+}
+#content-right{
+	height: 500px;
+	border-left: 2px solid yellow;
+}
+#bottom{
+	border-top: 2px solid yellow;
+    margin-top: 30px;
+}
+#Music{
+	border: 2px solid gray;
+
+}
+a{
+	color: #007f00;
+	font-weight: bold;
+}
+a:hover{
+	color: red;
+}
+
+.list-unstyled li{
+	margin-top: 5px;
+}
