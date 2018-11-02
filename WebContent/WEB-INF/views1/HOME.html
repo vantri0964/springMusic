@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html 
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  >
+<head lang="en">
+<meta charset="ISO-8859-1">
+<title>Music Store</title>
+<link  th:href="@{../static/css/MusicStoreCSS.css}"
+    rel="stylesheet" />
+    <link  th:href="@{static/css/MusicStoreCSS.css}"
+    rel="stylesheet" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="Music">
+		<div class="container">
+			<div class="row">
+<div th:replace="../views1/HEADER::header" ></div>
+<div id="Content">
+<div class="col-md-3" id="content-left">
+<div th:replace="../views1/CONTENTLEFT::left"></div>
+</div>
+<div class="col-md-6" layout:fragment="content">
+ <div th:if="${action}=='/index/Home.htm'">
+<div th:replace="../views1/CONTENTCENTER::centerWC"></div>
+</div>
+<div th:if="${action}=='/index/thymeleaf.htm'">
+<div th:replace="../views1/CONTENTCENTER::centerWC"></div>
+</div>
+<div th:if="${action}=='/index/Browse.htm'">
+<div th:replace="../views1/CONTENTCATALOG::Browse"></div>
+</div>
+<div th:if="${action}=='/index/listen.htm'">
+<div th:replace="../views1/CONTENTLISTEN::listen1"></div>
+</div>
+<div th:if="${action}=='/index/DangNhapLS.htm'">
+<div th:replace="../views1/LOGINLISTEN::loginls"></div>
+</div>
+<div th:if="${action}=='/index/DangNhapTC.htm'">
+<div th:replace="../views1/CONTENTLISTENTsc::listenTC"></div>
+</div>
+<div th:if="${action}=='/index/Login.htm'">
+<div th:replace="../views1/LoginAdmin::admin"></div>
+</div>
+
+</div>
+
+<div class="col-md-3" id="content-right">
+<div th:if="${action}=='/index/listen.htm'">
+<div th:replace="../views1/CONTENTRIGHTBUTTON::dangnhap"></div>
+</div>
+<div th:if="${action}=='/index/DangNhapLS.htm'">
+<div th:replace="../views1/CONTENTRIGHTBUTTON::dangnhap"></div>
+</div>
+<div th:if="${action}=='/index/DangNhapTC.htm'">
+<div th:replace="../views1/CONTENTRIGHTBUTTON::dangnhap"></div>
+</div>
+<div th:if="${action}=='/index/Home.htm'">
+<div th:replace="../views1/CONTENTRIGHT::right"></div>
+</div>
+<div th:if="${action}=='/index/thymeleaf.htm'">
+<div th:replace="../views1/CONTENTRIGHT::right"></div>
+</div>
+<div th:if="${action}=='/index/Browse.htm'">
+<div th:replace="../views1/CONTENTRIGHT::right"></div>
+</div>
+<div th:if="${action}=='/index/Login.htm'">
+<div th:replace="../views1/CONTENTRIGHT::right"></div>
+</div>
+</div>
+</div>
+<div th:replace="../views1/FOOTER::footer"></div>		
+</div>
+		</div>
+</div>
+</body>
+</html>

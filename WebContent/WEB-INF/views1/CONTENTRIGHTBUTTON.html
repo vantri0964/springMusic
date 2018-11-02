@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="noidung" id="Add" th:fragment="dangnhap">
+		            	<!--  <input type="submit" value="Add to cart" style="border-radius: 40%;height: 50px; width: 130px; background-color: #ffffaa;color: #7f3f00; font-weight: bold;" ><br/>
+		            	<input type="submit" value="Listen to samoles"  style="border-radius: 40%;height: 50px; width: 130px;background-color: #ffffaa;color: #7f3f00; font-weight: bold;">-->
+		            	<div class="btn-group-vertical">
+		            	<form action="fewfewf">
+                        <button type="button" class="btn btn-warning" style="height: 50px;border-radius: 40%; width: 150px;"><span class="glyphicon glyphicon-plus"></span> Add to Cart</button>
+                        </form>
+                        <br/>
+                         <!--<input type="submit" value="Listen to Samples" style="border-radius: 40%;height: 50px; width: 130px;background-color: #ffffaa;color: #7f3f00; font-weight: bold;">--> 
+                       <form th:action="@{/index/DangNhapLS.htm}">
+                       <button type="submit" class="btn btn-warning" style="height: 50px;border-radius: 40%;width: 150px;"><span class="glyphicon glyphicon-headphones" ></span> Listen to Samples </button>
+                        </form>
+                    </div>
+		            </div>
+</body>
+</html>

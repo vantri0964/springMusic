@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:fragment="right">
+<h4><b>New Release</b></h4>
+				<img th:src="@{'/static/images/'+${code1}+'.jpg'}" alt="anh bai hat" width="80px" height="80px"><br/>
+				<h4><a th:href="@{'/index/listen.htm'(${code1})}"><p th:text="${NoidungMax}"></p></a></h4>
+					<p>
+			        Music Store is an online store for selling audio files: music, speeches, narratives, everything audio. With Music Store your sales will be safe, with all the security PayPal offers.
+ </p>
+ </div>
+</body>
+</html>
